@@ -13,7 +13,7 @@ var driver = new webdriver.Builder().
     build()
 
 // url to visit
-let url = 'YOUTUBE_VIDEO_URL_HERE'
+let url = 'https://www.youtube.com/watch?v=xoXYe9e01_Y'
 
 // open browser with url
 driver.get(url)
@@ -27,7 +27,7 @@ btn.click()
 
 // waits and selects transcripts menu
 driver.wait(until.elementLocated(By.id('action-panel-overflow-menu')), 2000)
-var btn = driver.findElement(By.id('action-panel-overflow-menu'))
+var btn = driver.findElement(By.xpath("//button[@data-trigger-for='action-panel-transcript']"))  
 driver.sleep(1000)
 btn.click()
 
